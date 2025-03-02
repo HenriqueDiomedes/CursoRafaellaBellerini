@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Lista de Tarefas</h1>
+    <p>Adicione suas tarefas!</p>
+ 
+    <!-- insere uma caixa de para inserção de texto -->
+    <input type="text" id="inputTarefa" placeholder="Digite sua tarefa" required>
+    
+    <!-- Adiciona uma função ao botão, fução sera referênciada no .js -->
+    <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+    
+    <!-- recebera o conteudo da caixa de text e mostrara na tela -->
+    <p id="mensagem"></p>
+    
+    <!-- cria uma lista não ordenada com id 'listaTarefa'-->
+    <ul id="listaTarefa"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
