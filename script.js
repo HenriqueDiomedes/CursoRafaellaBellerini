@@ -1,3 +1,4 @@
+tarefas = []
 
 function adicionarTarefa() {
 
@@ -20,21 +21,23 @@ function adicionarTarefa() {
         let mensagemSucesso = "Tarefa adicionada com sucesso!";
         //coloca a variavel 'mensagem' no texo do paragrafo
         mensagem.textContent = mensagemSucesso;
-
-        //let cria uma variavel com nome listaTarefa, que iira refeber o elemento da    listaTarefa' do documento html.
-        const listaTarefa = document.getElementById("listaTarefa")
-    
-        //let cria uma nova variavel com nome 'novaTarefa' que ira criar uma lista dentro da 'listaTarefa'.
-        let novaTarefa = document.createElement("li")
-    
-        //novaTarefa recebe o elemento 'tarefa' que foi inserido no (inputtarefa)
-        novaTarefa.textContent = tarefa
-    
-        //insere o conteudo da 'novaTarefa' que é a (li), na proxima lista criada.
-        listaTarefa.appendChild(novaTarefa)
-
+        //adiciona mais uma terefa 
+        tarefas.push(tarefa)
+        rendenizarTarefa()
+        
+        //limpa a caixa de texto depois de apertar o botão.
+        inputTarefa.value = ""
     }
 
-    //limpa a caixa de texto depois de apertar o botão.
-    inputTarefa.value = ""
+    function rendenizarTarefa(){
+        const listaTarefa = document.getElementById("listaTarefa")
+        listaTarefa.innerHTML = ""
+
+        let i = 0
+        for (i; i < tarefas.length; i++){
+            let novaTarefa = document.getElementById("li")
+            novaTarefa.textContent = tarefas[i]
+            listaTarefa.appendChild(novaTarefa)
+        }
+    }
   }  
