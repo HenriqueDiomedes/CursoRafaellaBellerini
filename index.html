@@ -10,19 +10,13 @@
   <div class="container">
     <h1>Lista de Tarefas</h1>
     <p>Adicione suas tarefas!</p>
- 
-    <!-- insere uma caixa de para inserção de texto -->
-    <input type="text" id="inputTarefa" placeholder="Digite sua tarefa" required>
-    
-    <!-- Adiciona uma função ao botão, fução sera referênciada no .js -->
+    <input type="text" id="inputTarefa" placeholder="Digite a sua tarefa">
     <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
-    
-    <!-- recebera o conteudo da caixa de text e mostrara na tela -->
+    <button onclick="limparLista()" class="botao_lista">Limpar Tudo</button>
     <p id="mensagem"></p>
-    
-    <!-- cria uma lista não ordenada com id 'listaTarefa'-->
-    <ul id="listaTarefa"></ul>
+    <ul id="listaTarefas"></ul>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
